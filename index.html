@@ -258,31 +258,20 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            We present the first method capable of photorealistically reconstructing a non-rigidly
-            deforming scene using photos/videos captured casually from mobile phones.
-          </p>
-          <p>
-            Our approach augments neural radiance fields
-            (NeRF) by optimizing an
-            additional continuous volumetric deformation field that warps each observed point into a
-            canonical 5D NeRF.
-            We observe that these NeRF-like deformation fields are prone to local minima, and
-            propose a coarse-to-fine optimization method for coordinate-based models that allows for
-            more robust optimization.
-            By adapting principles from geometry processing and physical simulation to NeRF-like
-            models, we propose an elastic regularization of the deformation field that further
-            improves robustness.
-          </p>
-          <p>
-            We show that <span class="dnerf">Nerfies</span> can turn casually captured selfie
-            photos/videos into deformable NeRF
-            models that allow for photorealistic renderings of the subject from arbitrary
-            viewpoints, which we dub <i>"nerfies"</i>. We evaluate our method by collecting data
-            using a
-            rig with two mobile phones that take time-synchronized photos, yielding train/validation
-            images of the same pose at different viewpoints. We show that our method faithfully
-            reconstructs non-rigidly deforming scenes and reproduces unseen views with high
-            fidelity.
+            Remote sensing image generation is a pivotal technique for mitigating image scarcity in earth observation. 
+            However, existing generation methods are confined to single-modality synthesis, 
+            thereby failing to harness the complementary information inherent in multimodal images. 
+            In this paper, we propose a text-to-multimodal remote sensing image generation task,
+            which aims to generate semantically and structurally consistent multimodal remote sensing images (e.g., optical, infrared, and synthetic aperture radar) 
+            from a single textual prompt. The core challenge of this task lies in mapping invariant semantics from a single text prompt while adapting to different modality attributes. 
+            We observe that LoRA adapters exhibit an inherent functional dichotomy, enabling disentanglement of semantic invariance and modality attributes at the parameter level. 
+            Thus, we propose a contrastive parameter disentanglement module that establishes the parameter-level disentanglement of shared semantics 
+            and distinct attributes within the orthogonal core subspace. Based on this, we next build a disentangled optimization strategy that first constrains the parameter 
+            matrix A of the LoRA adapter to extract invariant semantics by a multi-modal contrastive objective and then guides the multiple parameter matrices B to adapt different 
+            modality attributes under text prompts, thereby enabling the simultaneous generation of semantically consistent multimodal images. Furthermore, to guarantee structure 
+            consistency in generated multi-modal images, we then devise a query-key structure transfer mechanism that injects structural correlation priors from the anchor modality 
+            into other modalities during the inference process. Extensive experiments demonstrate that our proposed method outperforms state-of-the-art remote sensing image generation 
+            methods in terms of generation quality and semantic consistency, and also yields superior performance in the downstream remote sensing object classification task.
           </p>
         </div>
       </div>
